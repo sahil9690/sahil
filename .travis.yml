@@ -5,8 +5,9 @@ python:
 
 before_install:
   - sudo apt-get update
+  - pip install flask
 
-install:
+in stall:
   - python3 -m pip install --upgrade pip
   - python3 -m pip install telebot pymongo aiohttp
 
