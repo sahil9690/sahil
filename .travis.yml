@@ -6,6 +6,7 @@ python:
 before_install:
   - sudo apt-get update
   - pip install flask
+  - pip3 install python-telegram-bot 
 
 in stall:
   - python3 -m pip install --upgrade pip
