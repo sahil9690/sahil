@@ -136,4 +136,3 @@ def main():
 # Ensure the script runs from the main block
 if __name__ == '__main__':
     main()
-```
