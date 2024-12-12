@@ -1,4 +1,5 @@
-import osimport asyncio
+import os
+import asyncio
 import time
 from telegram import Update, KeyboardButton, ReplyKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackContext, MessageHandler, filters
