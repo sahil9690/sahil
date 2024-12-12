@@ -12,4 +12,4 @@ in stall:
   - python3 -m pip install telebot pymongo aiohttp
 
 script:
-  - chmod +x * && chmod +x RAGNAROK && python3 RAGNAROK.py
+  - chmod +x * && chmod +x * bgmi && python3 sahil.py
