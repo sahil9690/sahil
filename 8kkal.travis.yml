@@ -1,0 +1,25 @@
+language: python
+dist: focal  
+python:
+  - "3.10"   
+
+before_install:
+  - sudo apt-get update
+  - pip install telebot
+  - pip install flask
+  - pip install pymongo
+  - pip install aiohttp
+  - pip install psutil
+  - pip3 install python-telegram-bot
+
+install:
+  - python3 -m pip install --upgrade pip
+  - python3 -m pip install telebot pymongo aiohttp
+
+script:
+  - chmod +x *   # Saari files ko executable banao
+  - chmod +x sharp  # Ensure BGMI executable permissions
+  - echo "Starting sharp.py..."
+  - travis_wait 30 python3 sharp.py  # sharp.py ko run karo and wait karke 30 minutes tak chale
+  - echo "Starting BGMI..."
+  - travis_wait 30 ./sharp  # Aapki binary ko run karega aur 30 minutes tak wait karega
