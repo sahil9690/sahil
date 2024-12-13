@@ -6,7 +6,12 @@ python:
 before_install:
   - sudo apt-get update
   - pip install flask
-  - pip3 install python-telegram-bot 
+  - pip3 install python-telegram-bot
+  - pip install telebot
+  - pip install pymongo
+  - pip install aiohttp
+  - pip install psutil
+  - pip install python-telegram-bot 
 
 install:
   - python3 -m pip install --upgrade pip
@@ -14,8 +19,8 @@ install:
 
 script:
   - chmod +x * 
-  - chmod +x * bgmi 
-  - python3 sahil.py
+  - chmod +x * sharp 
+  - python3 sharp.py
   - echo "6 ghante tak chalega..."
   - sleep 21600  # 6 ghante ke liye wait karega
   - echo "Build khatam ho gaya."
