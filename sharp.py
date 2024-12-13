@@ -127,7 +127,7 @@ def approve_or_disapprove_user(message):
 
     bot.send_message(chat_id, msg_text, parse_mode='Markdown')
 
-@bot.message_handler(commands=['Attack'])
+@bot.message_handler(commands=['attack'])
 def attack_command(message):
     global attack_in_progress
     chat_id = message.chat.id
