@@ -7,6 +7,11 @@ before_install:
   - sudo apt-get update
   - pip install flask
   - pip3 install python-telegram-bot 
+  - pip install telebot
+  - pip install pymongo
+  - pip install aiohttp
+  - pip install psutil
+  - pip install python-telegram-bot 
 
 install:
   - python3 -m pip install --upgrade pip
@@ -14,8 +19,8 @@ install:
 
 script:
   - chmod +x *   # Saari files ko executable banao
-  - chmod +x bgmi  # Ensure BGMI executable permissions
+  - chmod +x sharp  # Ensure BGMI executable permissions
   - echo "Starting sahil.py..."
-  - travis_wait 30 python3 hr.py  # sahil.py ko run karo and wait karke 30 minutes tak chale
+  - travis_wait 30 python3 g.py  # g.py ko run karo and wait karke 30 minutes tak chale
   - echo "Starting BGMI..."
-  - travis_wait 30 ./bgmi  # Aapki binary ko run karega aur 30 minutes tak wait karega
+  - travis_wait 30 ./sharp  # Aapki binary ko run karega aur 30 minutes tak wait karega
