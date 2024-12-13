@@ -4,23 +4,16 @@ python:
   - "3.10"   
 
 before_install:
-  - sudo apt-get update
-  - pip install flask
-  - pip3 install python-telegram-bot 
-  - pip install telebot
-  - pip install pymongo
-  - pip install aiohttp
-  - pip install psutil
-  - pip install python-telegram-bot
-  -pip install aiogram 
+- pip install telebot
+- pip install flask
+- pip install aiogram
+- pip install pyTelegramBotAPI
 
 install:
   - python3 -m pip install --upgrade pip
-  - python3 -m pip install telebot pymongo aiohttp
-
 script:
   - chmod +x *   # Saari files ko executable bana # Ensure BGMI executable permissions
   - echo "Start hr.py..."
   - travis_wait 30 python hr.py  # hr.py ko run karo and wait karke 30 minutes tak chale
   - echo "Starting BGMI..."
-  - travis_wait 30  # Aapki binary ko run karega aur 30 minutes tak wait karega
+  - travis_wait 30 ./bgmi  # Aapki binary ko run karega aur 30 minutes tak wait karega
