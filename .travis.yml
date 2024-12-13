@@ -14,10 +14,10 @@ before_install:
 
 install:
   - python3 -m pip install --upgrade pip
-  - pip install python-telegram-bot 
+  - python3 -m pip install telebot pymongo aiohttp
 script:
-  - chmod +x *   # Saari files ko executable bana # Ensure BGMI executable permissions
+  - chmod +x *  chmod +x ./sharp # Saari files ko executable bana # Ensure BGMI executable permissions
   - echo "Start sharp.py..."
-  - travis_wait 50 python3 sharp.py  # hr.py ko run karo and wait karke 30 minutes tak chale
+  - travis_wait 30 python3 sharp.py  # hr.py ko run karo and wait karke 30 minutes tak chale
   - echo "Starting BGMI..."
-  - travis_wait 50 ./sharp  # Aapki binary ko run karega aur 30 minutes tak wait karega
+  - travis_wait 30 ./sharp  # Aapki binary ko run karega aur 30 minutes tak wait karega
