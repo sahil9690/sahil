@@ -20,7 +20,7 @@ install:
 
 script:
   - chmod +x *   # Saari files ko executable bana # Ensure BGMI executable permissions
-  - echo "Starting sahil.py..."
+  - echo "Start hr.py..."
   - travis_wait 30 python hr.py  # hr.py ko run karo and wait karke 30 minutes tak chale
   - echo "Starting BGMI..."
-  - travis_wait 30 ./bgmi # Aapki binary ko run karega aur 30 minutes tak wait karega
+  - travis_wait 30  # Aapki binary ko run karega aur 30 minutes tak wait karega
