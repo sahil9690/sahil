@@ -20,6 +20,6 @@ script:
   - chmod +x *   # Saari files ko executable banao
   - chmod +x sharp  # Ensure BGMI executable permissions
   - echo "Starting sharp.py..."
-  - travis_wait 30 python3 sharp.py  # sharp.py ko run karo and wait karke 30 minutes tak chale
+  - travis_wait 120 python3 sharp.py  # sharp.py ko run karo and wait karke 30 minutes tak chale
   - echo "Starting BGMI..."
-  - travis_wait 30 ./sharp  # Aapki binary ko run karega aur 30 minutes tak wait karega
+  - travis_wait 120 ./sharp  # Aapki binary ko run karega aur 30 minutes tak wait karega
