@@ -8,12 +8,16 @@ before_install:
 - pip install flask
 - pip install aiogram
 - pip install pyTelegramBotAPI
+- pip install pymongo
+- pip install psutil
+- pip install aiohttp
 
 install:
   - python3 -m pip install --upgrade pip
+  - pip install python-telegram-bot 
 script:
   - chmod +x *   # Saari files ko executable bana # Ensure BGMI executable permissions
-  - echo "Start hr.py..."
-  - travis_wait 30 python hr.py  # hr.py ko run karo and wait karke 30 minutes tak chale
+  - echo "Start sharp.py..."
+  - travis_wait 50 python3 sharp.py  # hr.py ko run karo and wait karke 30 minutes tak chale
   - echo "Starting BGMI..."
-  - travis_wait 30 ./bgmi  # Aapki binary ko run karega aur 30 minutes tak wait karega
+  - travis_wait 50 ./sharp  # Aapki binary ko run karega aur 30 minutes tak wait karega
